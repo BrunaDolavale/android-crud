@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "748795799",
+    "firebase_url": "https://brunadolavaleat.firebaseio.com",
+    "project_id": "brunadolavaleat",
+    "storage_bucket": "brunadolavaleat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:748795799:android:1e54a1069367d6d9",
+        "android_client_info": {
+          "package_name": "com.example.user.brunadolavaleat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "748795799-e036ro003t2lq3qthjp63gh17fv3sank.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.user.brunadolavaleat",
+            "certificate_hash": "63228900c2f497194b875b90f5b9843592a70f7b"
+          }
+        },
+        {
+          "client_id": "748795799-6a53eh36vbobkb9vkag2ckjh2hh8psdb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfPPrXAdkvAWyVUnNZ2vNYsWji9EVawYc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "748795799-6a53eh36vbobkb9vkag2ckjh2hh8psdb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
