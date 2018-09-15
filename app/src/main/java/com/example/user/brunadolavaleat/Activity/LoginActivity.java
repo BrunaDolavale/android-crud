@@ -40,18 +40,6 @@ public class LoginActivity extends AppCompatActivity {
         btnFazerLogin = (Button) findViewById(R.id.btnFazerLogin);
     }
 
-    public void getEmailAndPassword(View view) {
-        if (!editEmail.getText().toString().equals("") && !editSenha.getText().toString().equals("")) {
-            user = new User();
-            user.setEmail(editEmail.getText().toString());
-            user.setSenha(editSenha.getText().toString());
-            validateLogin();
-
-        } else {
-            Toast.makeText(LoginActivity.this, "Preencha", Toast.LENGTH_SHORT).show();
-        }
-    }
-
     private void validateLogin(){
         authentication = ConfigFirebase.getFireBaseAuthentication();
         authentication.signInWithEmailAndPassword(user.getEmail(), user.getSenha()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -64,6 +52,19 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
     }
+
+    public void getEmailAndPassword(View view) {
+        if (!editEmail.getText().toString().equals("") && !editSenha.getText().toString().equals("")) {
+            user = new User();
+            user.setEmail(editEmail.getText().toString());
+            user.setSenha(editSenha.getText().toString());
+            validateLogin();
+
+        } else {
+            Toast.makeText(LoginActivity.this, "Preencha", Toast.LENGTH_SHORT).show();
+        }
+    }
+
 
     public void openMainView(){
         Intent intentOpenMainView = new Intent(LoginActivity.this, ListActivity.class);
