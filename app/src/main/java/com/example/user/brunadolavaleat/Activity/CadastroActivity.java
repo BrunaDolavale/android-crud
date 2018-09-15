@@ -62,15 +62,30 @@ public class CadastroActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Perform action on click
                 Toast.makeText(CadastroActivity.this, "CHAMOU FUNÇÃO", Toast.LENGTH_LONG).show();
+                if (edtCadSenha.getText().toString().equals(edtCadConfirmarSenha.getText().toString())) {
+                    user = new User();
+                    user.setNome(edtCadNome.getText().toString());
+                    user.setEmail(edtCadEmail.getText().toString());
+                    user.setSenha(edtCadSenha.getText().toString());
+                    user.setAniversario(edtCadAniversario.getText().toString());
+                    user.setSobrenome(edtCadSobrenome.getText().toString());
+
+                    if (radioFemale.isChecked()) {
+                        user.setSexo("Feminino");
+                    } else {
+                        user.setSexo("Masculino");
+                    }
+                } else {
+                    Toast.makeText(CadastroActivity.this, "As senhas não correspondem", Toast.LENGTH_LONG).show();
+                }
+                cadastrarUsuario();
             }
         });
     }
 
-
     private void cadastrarUsuario() {
         authentication = ConfigFirebase.getFireBaseAuthentication();
         authentication.createUserWithEmailAndPassword(
-
                 user.getEmail(),
                 user.getSenha()
         ).addOnCompleteListener(CadastroActivity.this, new OnCompleteListener<AuthResult>() {
