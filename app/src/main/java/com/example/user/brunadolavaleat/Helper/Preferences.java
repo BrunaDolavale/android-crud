@@ -3,7 +3,7 @@ package com.example.user.brunadolavaleat.Helper;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-public class Preferencies {
+public class Preferences {
     private Context context;
     private SharedPreferences preferences;
     private String NOME_ARQUIVO = "projetoFirebase.preferencias";
@@ -13,7 +13,7 @@ public class Preferencies {
     private final String KEY_IDENTIFIER = "identifierLoggedUser";
     private final String KEY_NAME = "nameLoggedUser";
 
-    public void preferences(Context context) {
+    public Preferences(Context context) {
         this.context = context;
         preferences = context.getSharedPreferences(NOME_ARQUIVO, NOME);
 

@@ -1,13 +1,42 @@
 package com.example.user.brunadolavaleat.Activity.Entities;
 
+import com.example.user.brunadolavaleat.DAO.ConfigFirebase;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.Exclude;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class User {
     private String id;
     private String email;
     private String senha;
     private String nome;
     private String sobrenome;
+    private String aniversario;
+    private String sexo;
 
     public User (){
+
+    }
+
+    public void save() {
+        DatabaseReference databaseReference = ConfigFirebase.getFirebase();
+        databaseReference.child("user").child(String.valueOf(getId())).setValue(this);
+    }
+
+    @Exclude
+    public Map<String, Object> toMap() {
+        HashMap<String, Object> hashmapUser = new HashMap<>();
+
+        hashmapUser.put("id", getId());
+        hashmapUser.put("senha", getSenha());
+        hashmapUser.put("sobrenome", getSobrenome());
+        hashmapUser.put("nome", getNome());
+        hashmapUser.put("aniversario", getAniversario());
+        hashmapUser.put("sexo", getSexo());
+
+        return hashmapUser;
 
     }
 
@@ -66,9 +95,6 @@ public class User {
     public void setSexo(String sexo) {
         this.sexo = sexo;
     }
-
-    private String aniversario;
-    private String sexo;
 
 }
 

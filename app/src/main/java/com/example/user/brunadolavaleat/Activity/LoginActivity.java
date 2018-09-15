@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.user.brunadolavaleat.Activity.Entities.User;
@@ -25,6 +26,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText editEmail;
     private EditText editSenha;
     private Button btnFazerLogin;
+    private TextView edtAbreCadastro;
     private FirebaseAuth authentication;
     private User user;
 
@@ -38,6 +40,7 @@ public class LoginActivity extends AppCompatActivity {
         editEmail = (EditText) findViewById(R.id.editEmail);
         editSenha = (EditText) findViewById(R.id.editSenha);
         btnFazerLogin = (Button) findViewById(R.id.btnFazerLogin);
+        edtAbreCadastro = (TextView) findViewById(R.id.edtAbreCadastro);
     }
 
     private void validateLogin(){
@@ -70,5 +73,12 @@ public class LoginActivity extends AppCompatActivity {
         Intent intentOpenMainView = new Intent(LoginActivity.this, ListActivity.class);
         startActivity(intentOpenMainView);
     }
+
+    public void openRegisterActivity(View v){
+        Intent intent = new Intent(LoginActivity.this, CadastroActivity.class);
+        startActivity(intent);
+    }
+
+
 
 }
