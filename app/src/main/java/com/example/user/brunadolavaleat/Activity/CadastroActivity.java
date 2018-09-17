@@ -84,24 +84,24 @@ public class CadastroActivity extends AppCompatActivity {
     }
 
     private void cadastrarUsuario() {
-        authentication = ConfigFirebase.getFireBaseAuthentication();
-        authentication.createUserWithEmailAndPassword(
-                user.getEmail(),
-                user.getSenha()
-        ).addOnCompleteListener(CadastroActivity.this, new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if (task.isSuccessful()){
-                    Toast.makeText(CadastroActivity.this, "Usuário cadastrado", Toast.LENGTH_LONG).show();
+                        authentication = ConfigFirebase.getFireBaseAuthentication();
+                        authentication.createUserWithEmailAndPassword(
+                                user.getEmail(),
+                                user.getSenha()
+                        ).addOnCompleteListener(CadastroActivity.this, new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (task.isSuccessful()){
+                                    Toast.makeText(CadastroActivity.this, "Usuário cadastrado", Toast.LENGTH_LONG).show();
 
-                    String userIdentification = Base64Custom.codificateBase64(user.getEmail());
+                                    String userIdentification = Base64Custom.codificateBase64(user.getEmail());
 
-                    FirebaseUser firebaseUser = task.getResult().getUser();
-                    user.setId(userIdentification);
-                    user.save();
+                                    FirebaseUser firebaseUser = task.getResult().getUser();
+                                    user.setId(userIdentification);
+                                    user.save();
 
-                    Preferences preferences = new Preferences(CadastroActivity.this);
-                    preferences.saveUserPreferencies(userIdentification, user.getNome());
+                                    Preferences preferences = new Preferences(CadastroActivity.this);
+                                    preferences.saveUserPreferencies(userIdentification, user.getNome());
                     openUserLogin();
                 } else {
                     String errorException = "";

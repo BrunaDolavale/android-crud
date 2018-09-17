@@ -3,8 +3,6 @@ package com.example.user.brunadolavaleat.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -73,6 +71,7 @@ public class LoginActivity extends AppCompatActivity {
         Intent intentOpenMainView = new Intent(LoginActivity.this, ListActivity.class);
         startActivity(intentOpenMainView);
     }
+
 
     public void openRegisterActivity(View v){
         Intent intent = new Intent(LoginActivity.this, CadastroActivity.class);

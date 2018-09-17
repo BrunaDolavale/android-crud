@@ -22,10 +22,16 @@
         android:gravity="center"/>
 
     <ImageView
-        android:id="@+id/cosmoWanda"
-        android:src="@drawable/cw"
+        android:id="@+id/git"
+        android:src="@drawable/git"
         android:layout_width="match_parent"
-        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnTeste"
+        android:text="Teste Lista"
+        android:onClick="testeLista"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <Button
@@ -34,5 +40,10 @@
         android:text="Logar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+
+
+
+
 
 </LinearLayout>
