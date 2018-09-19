@@ -38,11 +38,14 @@ public class ListActivity extends AppCompatActivity {
 
         final ListView  listView = findViewById(R.id.listView);
 
+        Gson gson = new GsonBuilder()
+                .setLenient()
+                .create();
 
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(Api.BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
 
         Api api = retrofit.create(Api.class);
