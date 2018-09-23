@@ -9,4 +9,8 @@
     <string name="title_activity_login">LoginActivity</string>
     <string name="title_activity_list">ListActivity</string>
     <string name="title_activity_cadastro">CadastroActivity</string>
+    <string name="facebook_app_id">288221808439488</string>
+    <string name="fb_login_protocol_scheme">fb288221808439488</string>
+
+
 </resources>
