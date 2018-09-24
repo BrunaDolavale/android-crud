@@ -39,7 +39,6 @@ public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth authentication;
     private User user;
     private Button loginButton;
-    CallbackManager callbackManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,18 +47,15 @@ public class LoginActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FacebookSdk.getApplicationContext();
-
         editEmail = (EditText) findViewById(R.id.editEmail);
         editSenha = (EditText) findViewById(R.id.editSenha);
         btnFazerLogin = (Button) findViewById(R.id.btnFazerLogin);
         edtAbreCadastro = (TextView) findViewById(R.id.edtAbreCadastro);
-        loginButton = (LoginButton) findViewById(R.id.login_button);
-        callbackManager = CallbackManager.Factory.create();
+
     }
 
 
-//    // Callback registration
+    // Callback registration
 //    loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
 //        @Override
 //        public void onSuccess(LoginResult loginResult) {
