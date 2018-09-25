@@ -29,6 +29,14 @@
         android:layout_height="200dp" />
 
     <Button
+        android:id="@+id/btnTeste"
+        android:text="Teste Lista"
+        android:onClick="testeLista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <Button
         android:id="@+id/btnFazerLogin"
         android:onClick="GoToLoginActivity"
         android:text="Logar"
@@ -41,5 +49,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="30dp" />
+
 
 </LinearLayout>
