@@ -30,7 +30,7 @@
 
     <Button
         android:id="@+id/btnLogar"
-        android:text="HUE"
+        android:text="Logar"
         android:onClick="getEmailAndPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

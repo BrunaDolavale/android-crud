@@ -34,8 +34,6 @@ public class CadastroActivity extends AppCompatActivity {
     private EditText edtCadSenha;
     private EditText edtCadConfirmarSenha;
     private EditText edtCadAniversario;
-    private RadioButton radioMale;
-    private RadioButton radioFemale;
     private Button btnGravar;
     private User user;
     private FirebaseAuth authentication;
@@ -54,14 +52,11 @@ public class CadastroActivity extends AppCompatActivity {
         edtCadSenha = (EditText)findViewById(R.id.edtCadSenha);
         edtCadConfirmarSenha = (EditText)findViewById(R.id.edtCadSenha);
         edtCadAniversario = (EditText)findViewById(R.id.edtCadAniversario);
-        radioFemale = (RadioButton)findViewById(R.id.radioFemale);
-        radioFemale = (RadioButton)findViewById(R.id.radioMale);
         btnGravar = (Button)findViewById(R.id.btnGravar);
 
         btnGravar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Perform action on click
-                Toast.makeText(CadastroActivity.this, "CHAMOU FUNÇÃO", Toast.LENGTH_LONG).show();
                 if (edtCadSenha.getText().toString().equals(edtCadConfirmarSenha.getText().toString())) {
                     user = new User();
                     user.setNome(edtCadNome.getText().toString());
@@ -70,11 +65,6 @@ public class CadastroActivity extends AppCompatActivity {
                     user.setAniversario(edtCadAniversario.getText().toString());
                     user.setSobrenome(edtCadSobrenome.getText().toString());
 
-                    if (radioFemale.isChecked()) {
-                        user.setSexo("Feminino");
-                    } else {
-                        user.setSexo("Masculino");
-                    }
                 } else {
                     Toast.makeText(CadastroActivity.this, "As senhas não correspondem", Toast.LENGTH_LONG).show();
                 }
@@ -131,10 +121,6 @@ public class CadastroActivity extends AppCompatActivity {
         finish();
     }
 
-//    public void openUserRegister(View v){
-//        Intent intent = new Intent(CadastroActivity.this, ListActivity.class);
-//        startActivity(intent);
-//    }
 
 
 

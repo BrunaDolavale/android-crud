@@ -22,11 +22,11 @@
         android:gravity="center"/>
 
     <ImageView
-        android:id="@+id/cosmoWanda"
-        android:src="@drawable/cw"
-        android:layout_width="match_parent"
-        android:layout_marginTop="20dp"
-        android:layout_height="wrap_content" />
+        android:id="@+id/git"
+        android:src="@drawable/git"
+        android:layout_width="200dp"
+        android:layout_gravity="center"
+        android:layout_height="200dp" />
 
     <Button
         android:id="@+id/btnFazerLogin"
@@ -37,10 +37,9 @@
 
     <com.facebook.login.widget.LoginButton
         android:id="@+id/login_button_fb"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30dp"
         android:layout_marginBottom="30dp" />
 
 </LinearLayout>

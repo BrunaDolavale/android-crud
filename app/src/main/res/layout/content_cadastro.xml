@@ -26,19 +26,18 @@
                 android:inputType="textCapCharacters"
                 android:layout_height="wrap_content" />
 
+            <EditText
+                android:id="@+id/edtCadSobrenome"
+                android:hint="Sobrenome"
+                android:layout_width="match_parent"
+                android:inputType="textCapCharacters"
+                android:layout_height="wrap_content" />
 
             <EditText
                 android:id="@+id/edtCadEmail"
                 android:hint="E-mail"
                 android:layout_width="match_parent"
                 android:inputType="textEmailAddress"
-                android:layout_height="wrap_content" />
-
-            <EditText
-                android:id="@+id/edtCadSobrenome"
-                android:hint="Sobrenome"
-                android:layout_width="match_parent"
-                android:inputType="textCapCharacters"
                 android:layout_height="wrap_content" />
 
             <EditText
@@ -57,36 +56,15 @@
 
             <EditText
                 android:id="@+id/edtCadConfirmarSenha"
-                android:hint="Confirar Senha"
+                android:hint="Confirmar Senha"
                 android:layout_width="match_parent"
                 android:inputType="textPassword"
                 android:layout_height="wrap_content" />
 
-            <RadioGroup
-                android:id="@+id/RadioSexo"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <RadioButton
-                    android:id="@+id/radioFemale"
-                    android:checked="true"
-                    android:hint="Mulher"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-                <RadioButton
-                    android:id="@+id/radioMale"
-                    android:checked="true"
-                    android:hint="Homem"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-            </RadioGroup>
 
             <Button
                 android:id="@+id/btnGravar"
-                android:text="Gravar"
+                android:text="Salvar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
